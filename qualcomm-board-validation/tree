@@ -1,0 +1,27 @@
+qualcomm-board-validation/
+├── README.md
+├── docs/
+│   ├── hardware_requirements.md
+│   ├── test_plan.md
+│   └── board_setup.md
+├── drivers/
+│   ├── pmic/config_pmic.c
+│   ├── ina231/ina231_driver.cpp
+│   ├── usb/usb_driver.c
+│   ├── sdcard/sdcard_driver.cpp
+│   ├── can/can_driver.c
+│   └── led/led_driver.cpp
+├── scripts/
+│   ├── flash_build.sh
+│   ├── run_tests.sh
+│   └── collect_logs.py
+├── tests/
+│   ├── test_sdcard.py
+│   ├── test_usb.py
+│   ├── test_can.py
+│   ├── test_led.py
+│   ├── test_pmic_adc.py
+│   └── test_ina231.py
+└── simulation/
+    ├── virtual_dashboard.py
+    └── hardware_simulator.cpp
