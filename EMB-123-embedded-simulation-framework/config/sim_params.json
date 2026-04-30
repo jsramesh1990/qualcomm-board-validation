@@ -1,0 +1,41 @@
+{
+    "simulation": {
+        "enabled": true,
+        "speed_factor": 1.0,
+        "random_seed": 12345,
+        "sensor_noise": 0.05,
+        "failure_rate": 0.001,
+        "log_level": "info"
+    },
+    "hardware": {
+        "can_interface": "can0",
+        "bitrate": 500000,
+        "i2c_bus": 2,
+        "spi_bus": 1
+    },
+    "sensors": {
+        "pmic": {
+            "adc_channels": 8,
+            "voltage_range": [0, 5.0],
+            "temperature_range": [-40, 125]
+        },
+        "ina231": {
+            "voltage_range": [0, 32],
+            "current_range": [-10, 10],
+            "update_rate": 100
+        }
+    },
+    "testing": {
+        "unit_tests": true,
+        "integration_tests": true,
+        "regression_tests": true,
+        "performance_threshold_ms": 100
+    },
+    "dashboard": {
+        "enabled": true,
+        "refresh_rate_hz": 10,
+        "theme": "dark",
+        "show_can_traffic": true,
+        "show_power_data": true
+    }
+}
