@@ -1,0 +1,15 @@
+# Clone and checkout branch
+git checkout feature/EMB-123-embedded-simulation-framework
+
+# Build
+mkdir build && cd build
+cmake .. && make -j$(nproc)
+
+# Run simulation with dashboard
+./embedded_sim --mode=simulation --dashboard
+
+# Run tests
+./scripts/run_tests.sh
+
+# Hardware mode (if on target)
+./embedded_sim --mode=hardware --config=../config/board_config.h

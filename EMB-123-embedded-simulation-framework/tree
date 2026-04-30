@@ -1,0 +1,88 @@
+feature/EMB-123-embedded-simulation-framework/
+├── CMakeLists.txt
+├── README.md
+├── .gitignore
+├── LICENSE
+├── config/
+│   ├── board_config.h
+│   └── sim_params.json
+├── include/
+│   ├── platform.h
+│   ├── error_codes.h
+│   ├── logger.h
+│   ├── watchdog.h
+│   └── config_manager.h
+├── src/
+│   ├── main.c
+│   ├── boot/
+│   │   ├── boot_sequence.c
+│   │   ├── boot_sequence.h
+│   │   └── error_handler.c
+│   ├── drivers/
+│   │   ├── pmic/
+│   │   │   ├── pmic_adc.c
+│   │   │   ├── pmic_adc.h
+│   │   │   ├── thermistor.c
+│   │   │   └── thermistor.h
+│   │   ├── usb/
+│   │   │   ├── usb_host.c
+│   │   │   └── usb_host.h
+│   │   ├── can/
+│   │   │   ├── can_bus.c
+│   │   │   └── can_bus.h
+│   │   ├── sd_card/
+│   │   │   ├── sd_card.c
+│   │   │   └── sd_card.h
+│   │   ├── led/
+│   │   │   ├── led_ctrl.c
+│   │   │   └── led_ctrl.h
+│   │   └── ina231/
+│   │       ├── ina231.c
+│   │       └── ina231.h
+│   ├── simulation/
+│   │   ├── sensor_sim.c
+│   │   ├── sensor_sim.h
+│   │   ├── event_injector.c
+│   │   ├── event_injector.h
+│   │   ├── virtual_dashboard.c
+│   │   └── virtual_dashboard.h
+│   ├── core/
+│   │   ├── scheduler.c
+│   │   ├── scheduler.h
+│   │   ├── logger.c
+│   │   ├── watchdog.c
+│   │   └── config_manager.c
+│   └── tests/
+│       ├── test_runner.c
+│       ├── test_framework.h
+│       ├── unit/
+│       │   ├── test_pmic.c
+│       │   ├── test_can.c
+│       │   ├── test_usb.c
+│       │   ├── test_sd_card.c
+│       │   ├── test_led.c
+│       │   └── test_ina231.c
+│       ├── integration/
+│       │   ├── test_boot_sequence.c
+│       │   ├── test_driver_interaction.c
+│       │   └── test_simulation_integration.c
+│       └── regression/
+│           ├── test_regression_suite.c
+│           └── test_performance.c
+├── scripts/
+│   ├── run_tests.sh
+│   ├── build.sh
+│   ├── deploy.sh
+│   └── analyze_coverage.sh
+├── docs/
+│   ├── API.md
+│   ├── ARCHITECTURE.md
+│   ├── BUILD.md
+│   ├── TESTING.md
+│   └── DEPLOYMENT.md
+├── assets/
+│   ├── dashboard_ui.html
+│   └── sample_logs/
+└── tools/
+    ├── can_simulator.py
+    └── usb_monitor.py
